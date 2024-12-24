@@ -1,9 +1,12 @@
+use day7::Operator;
+
 mod day1;
 mod day2;
 mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 
 fn main() {
     println!("Day 1 part 1: {}", day1::total_distance("data/day1.txt"));
@@ -47,5 +50,18 @@ fn main() {
     println!(
         "Day 6 part 2: {}",
         day6::obstacles_causing_a_loop("data/day6.txt")
+    );
+
+    println!(
+        "Day 7 part 1: {}",
+        day7::calibration_result("data/day7.txt", &[Operator::Add, Operator::Mul])
+    );
+
+    println!(
+        "Day 7 part 2: {}",
+        day7::calibration_result(
+            "data/day7.txt",
+            &[Operator::Add, Operator::Mul, Operator::Concat]
+        )
     );
 }
